@@ -1,0 +1,12 @@
+app.yaml 
+runtime: python311 
+entrypoint: gunicorn -b :$PORT main:app 
+ main.py 
+from flask import Flask 
+app2 = Flask(__name__) 
+@app2.route('/') 
+def hello(): 
+return 'Hello World from GitHub! 
+ requirements.txt 
+Flask==2.3.3 
+gunicorn==21.2.0 
